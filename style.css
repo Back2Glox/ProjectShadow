@@ -1,0 +1,58 @@
+/* CSS styling */
+body {
+  background-color: #1b1b1b;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  background-color: #ff8c00;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 50px;
+}
+
+.services {
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 50px;
+}
+
+.service-item {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #ff8c00;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
