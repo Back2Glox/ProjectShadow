@@ -1,25 +1,19 @@
-/* CSS styling */
 body {
-  background-color: #1b1b1b;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
 }
 
 header {
-  background-color: #ff8c00;
+  background-color: #003366;
+  color: #ffffff;
   padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-}
-
 nav ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 nav li {
@@ -27,32 +21,80 @@ nav li {
   margin-right: 20px;
 }
 
-nav li a {
-  color: #fff;
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #ffffff;
   text-decoration: none;
 }
 
-.hero {
-  background-color: #ff8c00;
-  color: #fff;
-  padding: 50px;
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #003366;
 }
 
 .services {
-  background-color: #1b1b1b;
-  color: #fff;
-  padding: 50px;
+  margin-top: 50px;
+  color: #003366;
 }
 
-.service-item {
+.services h2 {
+  font-size: 24px;
   margin-bottom: 20px;
+  color: #ff6600;
 }
 
-.btn {
-  background-color: #fff;
-  color: #ff8c00;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  text-decoration: none;
+.services ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
+
+.news {
+  margin-top: 50px;
+}
+
+.news h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff6600;
+}
+
+.news ul {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+.news li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+a:hover {
+  color: #ff6600;
+}
+
+
+
+
+
+
+  
