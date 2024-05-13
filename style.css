@@ -1,9 +1,10 @@
 /* Resetting default browser styles */
-body, h1, h2, p, ul, li {
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
+/* Global Styles */
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #000;
@@ -35,26 +36,77 @@ main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 40px;
+/* Parallax Scrolling Background Styles */
+.parallax {
+  background-image: url('background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-h2 {
-  color: #0f0;
+.parallax h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* FAQ Section Styles */
+#faq {
+  margin-top: 40px;
+}
+
+.accordion-item {
+  margin-bottom: 20px;
+}
+
+.accordion-title {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accordion-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Blog Section Styles */
+#blog {
+  margin-top: 40px;
+}
+
+.blog-post {
+  margin-top: 20px;
+}
+
+.blog-post h3 {
+  margin-bottom: 5px;
+}
+
+.blog-post p {
   margin-bottom: 10px;
 }
 
+.blog-post a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
   background-color: #000;
   color: #0f0;
   text-align: center;
   padding: 20px;
-}
-
-input[type="password"] {
-  background-color: #000;
-  color: #0f0;
-  border: 1px solid #0f0; /* Add a green border for visibility */
-  padding: 10px;
-  margin-bottom: 10px;
 }
