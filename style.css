@@ -50,3 +50,11 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+input[type="password"] {
+  background-color: #000;
+  color: #0f0;
+  border: 1px solid #0f0; /* Add a green border for visibility */
+  padding: 10px;
+  margin-bottom: 10px;
+}
