@@ -8,7 +8,7 @@ hackButton.addEventListener("click", () => {
   const password = passwordInput.value;
 
   // Check if the entered password is correct
-  if (password === "shadow123") {
+  if (password === "&beGn^f&P9*L32C&t%AZEd*E#qnAiW23!FxveVjLJFWrsP3gZgqt9PsKP22kYV9t8cQSANshJ#awtZz#") {
     // If correct, trigger the hack animation
     hack();
   } else {
