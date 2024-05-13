@@ -18,19 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Function to trigger the hack animation
   function hack() {
-    // Simulate hacking process (e.g., flashing lights, scrolling code)
+    // Simulate hacking process
     alert("Hacking in progress...");
-
     // Hide the main content and footer temporarily during the hack animation
     const mainContent = document.querySelector("main");
     const footer = document.querySelector("footer");
     mainContent.style.display = "none";
     footer.style.display = "none";
 
-    // Simulate flashing lights
+    // Execute the complex animations
     flashLights(5, 200);
-
-    // Simulate scrolling code
     scrollCode();
 
     // Restore main content and footer after the animation completes
@@ -93,5 +90,4 @@ document.addEventListener("DOMContentLoaded", function() {
     codeArea.scrollTop = codeArea.scrollHeight;
   }
 
-  // Additional animations can be added here...
 });
