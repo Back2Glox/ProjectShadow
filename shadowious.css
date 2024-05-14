@@ -1,62 +1,49 @@
-/* CSS styles for shadowious.html - Hacker Styled */
-
 body {
-  background-color: #000;
-  color: #0f0;
-  font-family: 'Courier New', Courier, monospace; /* Monospace font for a hacker feel */
-}
-
-header h1 {
-  font-size: 2em;
+  background-color: black;
+  color: lime;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
-  padding: 20px;
 }
 
-main {
-  padding: 20px;
+header, footer {
+  margin: 20px;
 }
 
-section {
-  margin-bottom: 30px;
+h1, h2, h3 {
+  color: lime;
+  text-shadow: 0 0 10px lime;
 }
 
-h2 {
-  color: #0f0;
+a {
+  color: lime;
+  text-decoration: none;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.6;
+a:hover {
+  text-decoration: underline;
 }
 
-ul, ol {
-  list-style-type: none;
+.password-protect {
+  margin: 50px auto;
+  width: 80%;
 }
 
-li::before {
-  content: "»";
-  color: #0f0;
-  margin-right: 10px;
+input[type="password"] {
+  background-color: black;
+  color: lime;
+  border: 1px solid lime;
+  padding: 5px;
+  margin: 10px 0;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
+button {
+  background-color: black;
+  color: lime;
+  border: 1px solid lime;
+  padding: 5px 10px;
 }
 
-#introduction {
-  border-bottom: 1px solid #0f0;
-  padding-bottom: 20px;
-}
-
-#act1, #act2, #act3, #act4, #act5, #additional-elements {
-  border-bottom: 1px solid #0f0;
-  padding-bottom: 20px;
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; /* Center the logo */
+button:hover {
+  background-color: lime;
+  color: black;
 }
