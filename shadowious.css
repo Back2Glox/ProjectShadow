@@ -1,28 +1,62 @@
-/* CSS styles for shadowious.html */
+/* CSS styles for shadowious.html - Hacker Styled */
 
 body {
   background-color: #000;
   color: #0f0;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a hacker feel */
 }
 
-.story-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px;
-  text-align: center; /* Center-align content */
+header h1 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
 }
 
-.story-title {
-  font-size: 36px;
+main {
+  padding: 20px;
+}
+
+section {
   margin-bottom: 30px;
 }
 
-.story-content {
-  font-size: 18px;
+h2 {
+  color: #0f0;
+}
+
+p {
+  font-size: 16px;
   line-height: 1.6;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
+li::before {
+  content: "»";
+  color: #0f0;
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+#introduction {
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 20px;
+}
+
+#act1, #act2, #act3, #act4, #act5, #additional-elements {
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 20px;
+}
+
 .logo {
-  width: 300px;
+  width: 200px;
   height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Center the logo */
 }
