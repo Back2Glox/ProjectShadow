@@ -1,0 +1,28 @@
+/* CSS styles for shadowious.html */
+
+body {
+  background-color: #000;
+  color: #0f0;
+}
+
+.story-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center; /* Center-align content */
+}
+
+.story-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.story-content {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
