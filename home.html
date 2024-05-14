@@ -1,37 +1,85 @@
-<!-- FAQ Section -->
-<section id="faq">
-  <h2>FAQ</h2>
-  <div class="accordion">
-    <div class="accordion-item">
-      <h3 class="accordion-title">What is Shadow Chronicles?</h3>
-      <div class="accordion-content">
-        <p>Shadow Chronicles is a digital saga set in the mysterious realm of Shadow, where data flows like rivers and algorithms shape reality. Follow the epic journey of 5H4D0W and the parallel Shadows as they navigate conflicts and uncover dark secrets.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shadow Chronicles - Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Shadow Chronicles</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="characters.html">Characters</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Parallax Scrolling Background -->
+    <section class="parallax">
+      <h2>Welcome to the Digital Realm of Shadow</h2>
+    </section>
+
+    <!-- Password Hack Section -->
+    <section id="password-hack">
+      <h2>Password Hack</h2>
+      <form id="hack-form" onsubmit="event.preventDefault(); hack();">
+        <label for="password">Enter the Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Hack</button>
+        <p id="hack-message"></p>
+      </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <h3 class="accordion-title">What is Shadow Chronicles?</h3>
+          <div class="accordion-content">
+            <p>Shadow Chronicles is a digital saga set in the mysterious realm of Shadow, where data flows like rivers and algorithms shape reality. Follow the epic journey of 5H4D0W and the parallel Shadows as they navigate conflicts and uncover dark secrets.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-title">Who are the main characters?</h3>
+          <div class="accordion-content">
+            <p>The main characters include Widowious Glistan, Veridius Glixen, and Luminar Glistral, each with their own unique abilities and motivations.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-title">What are the goals of the Shadows?</h3>
+          <div class="accordion-content">
+            <p>The Shadows aim to uncover the truth behind The Codebreaker's actions and retrieve the CipherCore to restore balance to Shadow.</p>
+          </div>
+        </div>
+        <!-- Additional FAQ items -->
+        <div class="accordion-item">
+          <h3 class="accordion-title">How can I join the fight against The Codebreaker?</h3>
+          <div class="accordion-content">
+            <p>To join the fight against The Codebreaker, you can enlist as a Shadow agent and undergo rigorous training to harness your digital skills and combat abilities.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-title">What is the significance of the CipherCore?</h3>
+          <div class="accordion-content">
+            <p>The CipherCore is a powerful artifact that holds the key to unlocking the true potential of Shadow and restoring balance to the digital realm. Its significance lies in its ability to neutralize The Codebreaker's influence and safeguard the integrity of Shadow.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h3 class="accordion-title">Who are the main characters?</h3>
-      <div class="accordion-content">
-        <p>The main characters include Widowious Glistan, Veridius Glixen, and Luminar Glistral, each with their own unique abilities and motivations.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h3 class="accordion-title">What are the goals of the Shadows?</h3>
-      <div class="accordion-content">
-        <p>The Shadows aim to uncover the truth behind The Codebreaker's actions and retrieve the CipherCore to restore balance to Shadow.</p>
-      </div>
-    </div>
-    <!-- Additional FAQ items -->
-    <div class="accordion-item">
-      <h3 class="accordion-title">How can I join the fight against The Codebreaker?</h3>
-      <div class="accordion-content">
-        <p>To join the fight against The Codebreaker, you can enlist as a Shadow agent and undergo rigorous training to harness your digital skills and combat abilities.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h3 class="accordion-title">What is the significance of the CipherCore?</h3>
-      <div class="accordion-content">
-        <p>The CipherCore is a powerful artifact that holds the key to unlocking the true potential of Shadow and restoring balance to the digital realm. Its significance lies in its ability to neutralize The Codebreaker's influence and safeguard the integrity of Shadow.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shadow Chronicles. All rights reserved.</p>
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
