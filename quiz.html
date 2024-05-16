@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="quiz.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Which Shadow Character Are You?</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shadowious.html">Shadowious</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="fanart.html">Fan Art</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="quizForm">
+            <div class="question">
+                <p>Question 1: What's your preferred strategy?</p>
+                <input type="radio" id="q1a" name="q1" value="Widowious">
+                <label for="q1a">Tactical planning</label><br>
+                <input type="radio" id="q1b" name="q1" value="Veridius">
+                <label for="q1b">Encryption and secrecy</label><br>
+                <input type="radio" id="q1c" name="q1" value="Luminar">
+                <label for="q1c">Knowledge and wisdom</label>
+            </div>
+            <!-- Add more questions similarly -->
+            <button type="submit">See Result</button>
+        </form>
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Shadow Chronicles</p>
+    </footer>
+</body>
+</html>
