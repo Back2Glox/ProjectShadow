@@ -1,0 +1,88 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #00ff99;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #00ff99;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #00ff99;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+h2 {
+    color: #00ff99;
+}
+
+form {
+    background-color: #001f33;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin: 1em 0 0.5em 0;
+    color: #00ff99;
+}
+
+select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background-color: #003366;
+    color: #00ff99;
+    border: 1px solid #00ff99;
+    border-radius: 5px;
+}
+
+button {
+    background-color: black;
+    color: #00ff99;
+    border: 2px solid #00ff99;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #00ff99;
+    color: black;
+}
+
+footer {
+    background-color: #003366;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
