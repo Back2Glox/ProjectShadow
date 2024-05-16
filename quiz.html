@@ -22,17 +22,43 @@
     </header>
     <main>
         <form id="quizForm">
-            <div class="question">
-                <p>Question 1: What's your preferred strategy?</p>
-                <input type="radio" id="q1a" name="q1" value="Widowious">
-                <label for="q1a">Tactical planning</label><br>
-                <input type="radio" id="q1b" name="q1" value="Veridius">
-                <label for="q1b">Encryption and secrecy</label><br>
-                <input type="radio" id="q1c" name="q1" value="Luminar">
-                <label for="q1c">Knowledge and wisdom</label>
-            </div>
-            <!-- Add more questions similarly -->
-            <button type="submit">See Result</button>
+            <label for="q1">1. What is your approach to problem-solving?</label>
+            <select id="q1" name="q1">
+                <option value="strategic">Strategic and calculated</option>
+                <option value="secretive">Secretive and encrypted</option>
+                <option value="knowledgeable">Using ancient knowledge</option>
+            </select>
+
+            <label for="q2">2. What is your greatest strength?</label>
+            <select id="q2" name="q2">
+                <option value="tactics">Tactics and planning</option>
+                <option value="encryption">Encryption and decryption</option>
+                <option value="wisdom">Wisdom and mediation</option>
+            </select>
+
+            <label for="q3">3. How do you handle conflicts?</label>
+            <select id="q3" name="q3">
+                <option value="analyze">Analyze and outmaneuver</option>
+                <option value="protect">Protect secrets</option>
+                <option value="mediate">Mediate and resolve</option>
+            </select>
+
+            <!-- Additional questions -->
+            <label for="q4">4. What motivates you the most?</label>
+            <select id="q4" name="q4">
+                <option value="control">Control and dominance</option>
+                <option value="secrecy">Secrecy and protection</option>
+                <option value="knowledge">Pursuit of knowledge</option>
+            </select>
+
+            <label for="q5">5. How do you view teamwork?</label>
+            <select id="q5" name="q5">
+                <option value="tool">A tool for achieving goals</option>
+                <option value="necessity">A necessity for protection</option>
+                <option value="strength">A strength through unity</option>
+            </select>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
         </form>
         <div id="result"></div>
     </main>
