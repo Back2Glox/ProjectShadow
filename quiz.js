@@ -14,7 +14,9 @@ function submitQuiz() {
     };
 
     for (let key in answers) {
-        score[answers[key]]++;
+        if (answers[key] === 'strategic') score.strategic++;
+        if (answers[key] === 'secretive') score.secretive++;
+        if (answers[key] === 'knowledgeable') score.knowledgeable++;
     }
 
     let result = '';
