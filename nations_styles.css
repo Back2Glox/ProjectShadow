@@ -1,0 +1,55 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #c0c0c0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6f61;
+    text-shadow: 2px 2px #000;
+}
+
+.nation {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nation-flag {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 2px solid #ff6f61;
+}
+
+.nation-description h2 {
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #888;
+    border-top: 1px solid #444;
+}
+
+.footer p {
+    margin: 0;
+}
