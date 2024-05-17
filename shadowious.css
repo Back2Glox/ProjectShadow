@@ -1,49 +1,72 @@
 body {
-  background-color: black;
-  color: lime;
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #00ff99;
+    margin: 0;
+    padding: 0;
 }
 
-header, footer {
-  margin: 20px;
+header {
+    background-color: #001f3f;
+    padding: 1em;
+    text-align: center;
 }
 
-h1, h2, h3 {
-  color: lime;
-  text-shadow: 0 0 10px lime;
+header h1 {
+    margin: 0;
+    color: #00ff99;
 }
 
-a {
-  color: lime;
-  text-decoration: none;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-a:hover {
-  text-decoration: underline;
+nav ul li {
+    display: inline;
+    margin: 0 1em;
 }
 
-.password-protect {
-  margin: 50px auto;
-  width: 80%;
+nav ul li a {
+    color: #00ff99;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+h2 {
+    color: #00ff99;
 }
 
 input[type="password"] {
-  background-color: black;
-  color: lime;
-  border: 1px solid lime;
-  padding: 5px;
-  margin: 10px 0;
+    padding: 0.5em;
+    margin: 1em 0;
+    border: 1px solid #00ff99;
+    border-radius: 5px;
+    background-color: #00264d;
+    color: #00ff99;
 }
 
 button {
-  background-color: black;
-  color: lime;
-  border: 1px solid lime;
-  padding: 5px 10px;
+    background-color: #000000;
+    color: #00ff99;
+    border: 2px solid #00ff99;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-  background-color: lime;
-  color: black;
+    background-color: #00ff99;
+    color: #000000;
+}
+
+footer {
+    background-color: #001f3f;
+    text-align: center;
+    padding: 1em;
 }
