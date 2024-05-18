@@ -1,52 +1,51 @@
 body {
-    background-color: #121212;
-    color: #e0e0e0;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #c0c0c0;
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
 h1 {
     text-align: center;
-    color: #ff4c4c;
+    color: #ff6f61;
+    text-shadow: 2px 2px #000;
 }
 
 .event {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
     margin: 20px 0;
-    padding: 10px;
-    border-left: 4px solid #ff4c4c;
-    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .event-date {
-    font-size: 1.2em;
     font-weight: bold;
-    color: #ff4c4c;
+    color: #ff6f61;
+    margin-bottom: 10px;
 }
 
-.event-description h2 {
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-}
-
-.event-description p {
-    margin: 5px 0 0 0;
-    color: #d3d3d3;
+.event-description h2, .event-description h3 {
+    color: #ff6f61;
+    margin-bottom: 10px;
 }
 
 .footer {
     text-align: center;
-    padding: 20px;
-    background-color: #1e1e1e;
-    color: #d3d3d3;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #888;
+    border-top: 1px solid #444;
+}
+
+.footer p {
+    margin: 0;
 }
