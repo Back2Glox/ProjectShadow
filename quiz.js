@@ -1,34 +1,57 @@
-function submitQuiz() {
-    const answers = {
-        q1: document.getElementById('q1').value,
-        q2: document.getElementById('q2').value,
-        q3: document.getElementById('q3').value,
-        q4: document.getElementById('q4').value,
-        q5: document.getElementById('q5').value,
-    };
+let currentQuestion = 1;
+let correctAnswers = 0;
 
-    let score = {
-        strategic: 0,
-        secretive: 0,
-        knowledgeable: 0
-    };
+const answers = {
+    question1: 'a',
+    question2: 'b',
+    question3: 'b',
+    question4: 'd',
+    // Add more correct answers here
+};
 
-    for (let key in answers) {
-        if (answers[key] === 'strategic') score.strategic++;
-        if (answers[key] === 'secretive') score.secretive++;
-        if (answers[key] === 'knowledgeable') score.knowledgeable++;
+function checkAnswer(questionId, answer) {
+    const questionElement = document.getElementById(questionId);
+    const nextQuestionId = `question${currentQuestion + 1}`;
+
+    if (answers[questionId] === answer) {
+        correctAnswers++;
     }
 
-    let result = '';
-    if (score.strategic > score.secretive && score.strategic > score.knowledgeable) {
-        result = 'You are Widowious Glistan, the calculating strategist!';
-    } else if (score.secretive > score.strategic && score.secretive > score.knowledgeable) {
-        result = 'You are Veridius Glixen, the master of encryption!';
-    } else if (score.knowledgeable > score.strategic && score.knowledgeable > score.secretive) {
-        result = 'You are Luminar Glistral, the guardian of ancient knowledge!';
+    questionElement.classList.add('hidden');
+
+    if (document.getElementById(nextQuestionId)) {
+        document.getElementById(nextQuestionId).classList.remove('hidden');
+        currentQuestion++;
     } else {
-        result = 'You have a balanced personality of all Shadows!';
+        showResult();
+    }
+}
+
+function showResult() {
+    const resultContainer = document.getElementById('result-container');
+    let resultMessage = `<h2>You got ${correctAnswers} out of ${Object.keys(answers).length} questions right!</h2>`;
+
+    if (correctAnswers === Object.keys(answers).length) {
+        resultMessage += `<p>Congratulations! You've unlocked the secret password: <strong>Sh4d0wP@ss</strong></p>`;
+    } else {
+        resultMessage += `<p>Try again to unlock the secret password.</p>`;
     }
 
-    document.getElementById('result').textContent = result;
+    resultContainer.innerHTML = resultMessage;
+    resultContainer.classList.add('fadeIn');
+}
+
+// Function to change themes
+function changeTheme(theme) {
+    const themeStyles = {
+        quiz: 'quiz.css',
+        archive: 'archive_styles.css',
+        characters: 'characters.css',
+        main: 'style.css',
+        nations: 'nations_styles.css',
+        shadowious: 'shadowious.css'
+    };
+
+    const linkElement = document.querySelector('link[rel="stylesheet"]');
+    linkElement.href = themeStyles[theme];
 }
