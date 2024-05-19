@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadow Quiz</title>
-    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="quiz.css" id="theme-stylesheet">
     <link rel="icon" type="image/x-icon" href="faviconArchive.ico">
 </head>
 <body>
@@ -22,6 +22,19 @@
             <li><a href="archive.html">Series Archive</a></li>
         </ul>
     </nav>
+    <div class="container">
+        <h1>Shadow Quiz</h1>
+        <div id="theme-selector">
+            <label for="theme-dropdown">Select Theme:</label>
+            <select id="theme-dropdown" onchange="changeTheme(this.value)">
+                <option value="quiz">Quiz Theme</option>
+                <option value="archive">Archive Theme</option>
+                <option value="characters">Characters Theme</option>
+                <option value="main">Main Theme</option>
+                <option value="nations">Nations Theme</option>
+                <option value="shadowious">Shadowious Theme</option>
+            </select>
+        </div>
     <div class="container">
         <h1>Shadow Quiz</h1>
         <div id="quiz-container">
