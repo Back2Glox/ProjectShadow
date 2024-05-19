@@ -3,72 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Quiz</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Shadow Quiz</title>
     <link rel="stylesheet" href="quiz.css">
-    <script defer src="quiz.js"></script>
+    <link rel="icon" type="image/x-icon" href="faviconArchive.ico">
 </head>
 <body>
-    <header>
-        <h1>Which Shadow Character Are You?</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Introduction</a></li>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="characters.html">Characters</a></li>
-                <li><a href="story.html">Story</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="fanart.html">Fan Art</a></li>
-                <li><a href="archive.html">Series Archive</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form id="quizForm">
-            <label for="q1">1. What is your approach to problem-solving?</label>
-            <select id="q1" name="q1">
-                <option value="strategic">Strategic and calculated</option>
-                <option value="secretive">Secretive and encrypted</option>
-                <option value="knowledgeable">Using ancient knowledge</option>
-            </select>
-
-            <label for="q2">2. What is your greatest strength?</label>
-            <select id="q2" name="q2">
-                <option value="tactics">Tactics and planning</option>
-                <option value="encryption">Encryption and decryption</option>
-                <option value="wisdom">Wisdom and mediation</option>
-            </select>
-
-            <label for="q3">3. How do you handle conflicts?</label>
-            <select id="q3" name="q3">
-                <option value="analyze">Analyze and outmaneuver</option>
-                <option value="protect">Protect secrets</option>
-                <option value="mediate">Mediate and resolve</option>
-            </select>
-
-            <label for="q4">4. What motivates you the most?</label>
-            <select id="q4" name="q4">
-                <option value="control">Control and dominance</option>
-                <option value="secrecy">Secrecy and protection</option>
-                <option value="knowledge">Pursuit of knowledge</option>
-            </select>
-
-            <label for="q5">5. How do you view teamwork?</label>
-            <select id="q5" name="q5">
-                <option value="tool">A tool for achieving goals</option>
-                <option value="necessity">A necessity for protection</option>
-                <option value="strength">A strength through unity</option>
-            </select>
-
-            <button type="button" onclick="submitQuiz()">Submit</button>
-        </form>
-        <div id="result"></div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Project Shadow Chronicles</p>
-    </footer>
+    <nav>
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="fanart.html">Fan Art</a></li>
+            <li><a href="archive.html">Series Archive</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Shadow Quiz</h1>
+        <div id="quiz-container">
+            <div class="quiz-section" id="question1">
+                <h2>Question 1: What is the original name of 5H4D0W?</h2>
+                <button onclick="checkAnswer('question1', 'a')">a) Shadowious Glitenta</button>
+                <button onclick="checkAnswer('question1', 'b')">b) Shadow Prime</button>
+                <button onclick="checkAnswer('question1', 'c')">c) Primus</button>
+                <button onclick="checkAnswer('question1', 'd')">d) Corrupted Byte</button>
+            </div>
+            <div class="quiz-section" id="question2">
+                <h2>Question 2: Where is the Core of the First Byte located?</h2>
+                <button onclick="checkAnswer('question2', 'a')">a) Shadow Realm</button>
+                <button onclick="checkAnswer('question2', 'b')">b) Digital Void</button>
+                <button onclick="checkAnswer('question2', 'c')">c) Ancient Archive</button>
+                <button onclick="checkAnswer('question2', 'd')">d) Binary Eclipse</button>
+            </div>
+            <div class="quiz-section hidden" id="question3">
+                <h2>Question 3: What event unlocks 5H4D0W's true power?</h2>
+                <button onclick="checkAnswer('question3', 'a')">a) Digital Equinox</button>
+                <button onclick="checkAnswer('question3', 'b')">b) Binary Eclipse</button>
+                <button onclick="checkAnswer('question3', 'c')">c) Data Surge</button>
+                <button onclick="checkAnswer('question3', 'd')">d) Algorithmic Solstice</button>
+            </div>
+            <div class="quiz-section hidden" id="question4">
+            <h2>Question 4: Who are the guardians of the Core?</h2>
+            <button onclick="checkAnswer('question4', 'a')">a) Keepers of the Code</button>
+            <button onclick="checkAnswer('question4', 'b')">b) Sentinels of the Byte</button>
+            <button onclick="checkAnswer('question4', 'c')">c) Watchers of the Stream</button>
+            <button onclick="checkAnswer('question4', 'd')">d) Protectors of the Digital Realm</button>
+            </div>
+        </div>
+        <div id="result-container"></div>
+        <div class="footer">
+            <p>© Shadow</p>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
 </body>
 </html>
