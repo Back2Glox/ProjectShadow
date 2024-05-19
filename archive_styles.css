@@ -18,46 +18,103 @@ h1 {
     text-shadow: 2px 2px #000;
 }
 
-#lore h2, #timelines h2 {
+.lore-box {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lore-box:hover {
+    transform: scale(1.02);
+}
+
+h2, h3 {
     color: #ff6f61;
     margin-bottom: 10px;
 }
 
-#lore p, #timelines p {
-    margin-bottom: 20px;
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #888;
+    border-top: 1px solid #444;
 }
 
-.draggable {
+.footer p {
+    margin: 0;
+}
+
+.hidden-box {
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hidden-box button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hidden-box button:hover {
+    background-color: #ff4b3e;
+}
+
+.hidden {
+    display: none;
+}
+
+.draggable-ball {
     width: 50px;
     height: 50px;
-    background-color: #333;
+    background-color: #ff6f61;
     border-radius: 50%;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .popup {
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 300px;
-    background-color: #000000;
-    border: 2px solid #00ff00;
-    padding: 20px;
-    z-index: 1000;
+    background-color: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .popup-content {
-    color: #00ff00;
-    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
 }
 
-.binary {
-    font-size: 18px;
-}
-
-.translation {
-    font-size: 14px;
-    margin-top: 10px;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
