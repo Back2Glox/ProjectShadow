@@ -1,41 +1,45 @@
-// Drag and drop functionality for the ball
-const ball = document.getElementById('draggable-ball');
-let isDragging = false;
-
-ball.addEventListener('mousedown', (event) => {
-    isDragging = true;
-    const offsetX = event.clientX - ball.getBoundingClientRect().left;
-    const offsetY = event.clientY - ball.getBoundingClientRect().top;
-
-    const onMouseMove = (moveEvent) => {
-        if (isDragging) {
-            ball.style.left = `${moveEvent.clientX - offsetX}px`;
-            ball.style.top = `${moveEvent.clientY - offsetY}px`;
-        }
-    };
-
-    const onMouseUp = () => {
-        isDragging = false;
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
-    };
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-});
-
-// Show popup on click
-ball.addEventListener('click', () => {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'block';
-    popup.style.left = `${ball.getBoundingClientRect().left + 60}px`;
-    popup.style.top = `${ball.getBoundingClientRect().top}px`;
-});
-
-// Hide popup when clicking outside
-document.addEventListener('click', (event) => {
-    const popup = document.getElementById('popup');
-    if (!popup.contains(event.target) && !ball.contains(event.target)) {
-        popup.style.display = 'none';
+document.getElementById('reveal-button').addEventListener('click', () => {
+    const password = prompt('Enter the password to reveal the secret lore:');
+    if (password === 'shadow') {
+        document.getElementById('secret-lore').style.display = 'block';
+    } else {
+        alert('Incorrect password.');
     }
 });
+
+const draggableBall = document.getElementById('draggable-ball');
+const popup = document.getElementById('popup');
+const popupClose = document.getElementById('popup-close');
+
+draggableBall.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+
+popupClose.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+draggableBall.addEventListener('mousedown', function(e) {
+    const shiftX = e.clientX - draggableBall.getBoundingClientRect().left;
+    const shiftY = e.clientY - draggableBall.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+        draggableBall.style.left = pageX - shiftX + 'px';
+        draggableBall.style.top = pageY - shiftY + 'px';
+    }
+
+    function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    draggableBall.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        draggableBall.onmouseup = null;
+    };
+});
+
+draggableBall.ondragstart = function() {
+    return false;
+};
