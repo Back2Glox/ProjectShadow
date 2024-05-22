@@ -1,107 +1,86 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #121212;
-    color: #c0c0c0;
-    margin: 0;
-    padding: 0;
+    font-family: 'VT323', monospace; /* Hacker-style font */
+    color: #0F0; /* Green text */
+    background-color: #000; /* Solid black background */
+    animation: glitch 1.5s infinite alternate; /* Add a glitch animation */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    background-color: #1c1c1c;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: #c0c0c0;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
+@keyframes glitch {
+  0% {
+    filter: none;
+  }
+  25% {
+    filter: skewX(4deg);
+  }
+  75% {
+    filter: skewX(-4deg);
+  }
+  100% {
+    filter: none;
+  }
 }
 
 .container {
-    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); /* Green glow effect */
 }
 
-h1 {
+.title {
     text-align: center;
-    color: #ff6f61;
-    text-shadow: 2px 2px #000;
+    font-size: 2em;
+    text-shadow: 0 0 3px #0F0; /* Green text shadow */
 }
 
-.quiz-section {
-    background-color: #1c1c1c;
-    border: 1px solid #444;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.intro {
+    margin-bottom: 15px;
+    animation: text-scroll 3s linear infinite; /* Add a scrolling text effect */
 }
 
-.quiz-section h2 {
-    color: #ff6f61;
+@keyframes text-scroll {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.question {
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #33FF00; /* Lime green color */
 }
 
-.quiz-section button {
-    background-color: #444;
-    color: #c0c0c0;
-    border: 2px solid #ff6f61;
-    padding: 10px;
-    margin: 5px;
+.answer-option {
+    margin-left: 20px;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    background-color: #0F0; /* Green button */
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    animation: button-pulse 1s ease-in-out infinite; /* Add a button pulse animation */
 }
 
-.quiz-section button:hover {
-    background-color: #575757;
+@keyframes button-pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 #result-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1c1c1c;
-    color: #888;
-    border-top: 1px solid #444;
-}
-
-.footer p {
-    margin: 0;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-.quiz-section {
-    animation: fadeIn 0.5s;
-}
-
-.hidden {
-    animation: fadeOut 0.5s;
-    display: none;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #0F0; /* Green color */
 }
